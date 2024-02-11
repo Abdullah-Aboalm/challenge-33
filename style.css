@@ -1,0 +1,240 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background-color: #f9fafe;
+}
+/* design */
+
+.container {
+  width: 50%;
+  height: fit-content;
+  padding: 25px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 70px rgba(0, 0, 0, 0.073);
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.head h2 {
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.head span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #043480;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.head p {
+  margin-left: auto;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+p {
+  transition: .3s;
+}
+
+p:hover {
+  color: #06216c;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #a2c6ff1f;
+  cursor: pointer;
+}
+
+.card img {
+  width: 45px;
+  margin-right: 20px;
+}
+
+.card .info h3 {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.card .info span.action {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.779);
+  margin: 0 5px;
+}
+
+.card .info p {
+  word-wrap: break-word;
+  font-weight: 500;
+}
+
+.card .info span.before {
+  display: block;
+  font-weight: 300;
+  color: rgba(128, 128, 128, 0.736);
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.card-5 img.chess {
+  margin-left: auto;
+}
+
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: 1.5px;
+  border-radius: 50%;
+  background-color: red;
+  margin-left: 5px;
+}
+
+.info {
+  position: relative;
+  flex: 1;
+}
+
+.msg {
+  position: absolute;
+  bottom: -75px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #e5eff9;
+  transition: .3s;
+  display: none;
+}
+
+
+.msg p {
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.msg:hover {
+  background-color: #e5eff9;
+  cursor: pointer;
+}
+
+/* end design */
+
+/* media query */
+
+/* small mobile */
+
+@media screen and (max-width: 374px) {
+  body {
+    padding: unset;
+  }
+  .container {
+    width: 100%;
+    padding: 20px 10px;
+  }
+  .card .info span.action {
+    margin: 0 2px;
+  }
+  .msg {
+    position: absolute;
+    bottom: -75px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #e5eff9;
+    transition: .3s;
+    display: none;
+  }
+  .card-5 img.chess {
+    display: none;
+  }
+}
+
+/* medium mobile */
+
+@media screen and (min-width: 375px) and (max-width: 424px) {
+  body {
+    padding: unset;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px 12.5px;
+  }
+
+  .card .info span.action {
+    margin: 0 2px;
+  }
+  .card img.chess {
+    display: none;
+  }
+}
+
+/* large mobile */
+
+@media screen and (min-width: 425px) and (max-width: 767px) {
+  body {
+    padding: unset;
+  }
+
+  .container {
+    width: 100%;
+    padding: 20px 15px;
+  }
+
+  .card .info span.action {
+    margin: 0 2px;
+  }
+  
+}
+
+/* tablet */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 85%;
+  }
+}
+
+/* laptop */
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .container {
+    width: 70%;
+  }
+}
